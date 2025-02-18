@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Browse from './Browse';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, useNavigate } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 import Login from './Login';
+
+
+
 
 const Body = () => {
 
@@ -15,7 +18,8 @@ const Body = () => {
             path: "/browse",
             element: <Browse />
         }
-    ])
+    ]);
+
     return (
         <div>
             <RouterProvider router={appRouter} />
