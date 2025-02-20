@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import Header from './Header';
-import { checkValidateData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import {BACKGROUND_IMAGE, USER_AVATAR} from '../utils/constants'
+import { checkValidateData } from '../utils/validate';
 
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
@@ -13,7 +13,6 @@ const Login = () => {
     const email = useRef(null);
     const password = useRef(null);
     const name = useRef(null);
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const toggleSignInForm = () => {
@@ -32,7 +31,7 @@ const Login = () => {
                     const user = userCredential.user;
                     console.log(user);
                     updateProfile(user, {
-                        displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/29451794?v=4"
+                        displayName: name.current.value, photoURL: USER_AVATAR
                     })
                         .then(() => {
                             const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -75,7 +74,7 @@ const Login = () => {
         <div>
             <Header />
             <div className='absolute'>
-                <img alt='background' src='https://assets.nflxext.com/ffe/siteui/vlv3/f268d374-734d-474f-ad13-af5ba87ef9fc/web/IN-en-20250210-TRIFECTA-perspective_92338d5d-6ccd-4b1a-8536-eb2b0240a55e_large.jpg' />
+                <img alt='backgroundImage' src={BACKGROUND_IMAGE} />
             </div>
             <div className="flex items-center justify-center min-h-screen bg-gray-900">
                 <div className="absolute bg-black bg-opacity-75 p-8 rounded-md w-full max-w-md">
