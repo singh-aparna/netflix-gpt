@@ -10,4 +10,6 @@ export const API_OPTIONS = {
     }
 }
 
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w780";
+
 // 75822fda7e20c758c03205a880c3933c

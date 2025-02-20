@@ -6,11 +6,11 @@ const VideoTitle = ({ title, overview }) => {
             <h1 className='text-5xl font-bold'>{title}</h1>
             <p className='py-6 text-md w-1/4'>{overview}</p>
             <div className='flex gap-x-2'>
-                <button className='bg-white text-black px-8 py-2 rounded-md hover:bg-opacity-50'>Play</button>
-                <button className='bg-[#f0f0f0] text-black text-white px-6 py-2 rounded-md'>! More Info</button>
+                <button className='bg-white text-black px-6 py-1 rounded-md hover:bg-opacity-50'>Play</button>
+                <button className='bg-[#f0f0f0] text-black px-5 py-1 rounded-md'>! More Info</button>
             </div>
         </div>
     )
 }
 
-export default VideoTitle
+export default VideoTitle;
