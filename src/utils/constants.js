@@ -19,3 +19,5 @@ export const SUPPORTED_LANGUAGES = [
 ];
 
 // 75822fda7e20c758c03205a880c3933c
+
+export const OPENAI_KEY = "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";

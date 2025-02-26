@@ -64,7 +64,7 @@ const Header = () => {
         {showGptSearch && (<select className='bg-red-600 text-white rounded-md px-3 py-1' onChange={handleLanguageChange}>
           {SUPPORTED_LANGUAGES.map((lang) => (<option key={lang.identifier} value={lang.identifier}>{lang.name}</option>))}
         </select>)}
-        <button onClick={handleGptSearchClick} className='text-white bg-red-600 rounded-md px-3 py-1'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
+        {/* <button onClick={handleGptSearchClick} className='text-white bg-red-600 rounded-md px-3 py-1'>{showGptSearch ? "Home Page" : "GPT Search"}</button> */}
         <img className='w-8 h-8' alt='usericon' src={user?.photoURL} />
         <button onClick={handleSignOut} className='bg-red-600 text-white rounded-md px-3 py-1'>Sign Out</button>
       </div>)}
